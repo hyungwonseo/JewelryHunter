@@ -472,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308178804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.09, y: 0, z: 0}
+  m_LocalPosition: {x: 60.69, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1033,6 +1033,7 @@ GameObject:
   - component: {fileID: 707862426}
   - component: {fileID: 707862425}
   - component: {fileID: 707862424}
+  - component: {fileID: 707862427}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1106,6 +1107,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707862427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707862423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe0d7160605ee54e9f5bc4fd7f41524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftLimit: 0
+  rightLimit: 44.1
+  bottomLimit: 0
+  topLimit: 0
 --- !u!1 &941588504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1535,7 @@ GameObject:
   - component: {fileID: 1337318057}
   - component: {fileID: 1337318056}
   - component: {fileID: 1337318055}
+  - component: {fileID: 1337318059}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1609,6 +1627,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1337318059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337318054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0129a8827550f2640af6b9597d690ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainImage: {fileID: 235979045}
+  gameOverImage: {fileID: 21300000, guid: 37fb1bee617714dd0a5b0c2ed389cb50, type: 3}
+  gameClearImage: {fileID: 21300000, guid: d1c932614a99b4ceb82bcbaebbad734f, type: 3}
+  restartButton: {fileID: 1194640446}
+  nextButton: {fileID: 1030909524}
 --- !u!1 &1513687383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2322,7 @@ GameObject:
   - component: {fileID: 2050501488}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2352,7 +2387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050501482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.334, y: -3.309, z: 0}
+  m_LocalPosition: {x: -7.34, y: -3.309, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

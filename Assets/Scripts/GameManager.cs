@@ -47,6 +47,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        // 버튼 이벤트 삭제
+        restartButton.GetComponent<Button>().onClick.RemoveListener(HandleRestartButton);
+        nextButton.GetComponent<Button>().onClick.RemoveListener(HandleNextButton);
+    }
+
     void InactivateMainImage()
     {
         mainImage.SetActive(false);
@@ -63,6 +70,13 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Next");
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentScene+1);
+        int lastScene = SceneManager.sceneCountInBuildSettings - 1;
+        if (currentScene == lastScene)
+        {
+            Debug.Log("현재 스테이지가 마지막 스테이지입니다.");
+        }else
+        {
+            SceneManager.LoadScene(currentScene + 1);
+        }        
     }
 }
