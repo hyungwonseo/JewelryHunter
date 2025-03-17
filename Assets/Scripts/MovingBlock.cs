@@ -97,7 +97,7 @@ public class MovingBlock : MonoBehaviour
                 if (isMoveWhenOn == false)
                 {
                     //올라 탓을 때 움직이는 값이 꺼져있는 경우
-                    Invoke("Move", wait);  // weight 만큼 지연 후 다시 이동
+                    Invoke("Move", wait);  // wait시간 만큼 지연 후 다시 이동
                 }
             }
         }
@@ -113,5 +113,21 @@ public class MovingBlock : MonoBehaviour
     public void Stop()
     {
         isCanMove = false;
-    }    
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.transform.SetParent(null);
+        }
+    }
 }
