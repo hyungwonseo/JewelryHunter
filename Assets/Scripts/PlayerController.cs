@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameState = "Playing";
         rbody = this.GetComponent<Rigidbody2D>();
         //Application.targetFrameRate = 60;
         animator = this.GetComponent<Animator>();
