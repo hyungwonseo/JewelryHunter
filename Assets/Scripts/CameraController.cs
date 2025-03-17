@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour
     public float bottomLimit = 0.0f;
     public float topLimit = 0.0f;
 
+    public GameObject subScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,15 @@ public class CameraController : MonoBehaviour
             }
 
             this.transform.position = new Vector3(x, y, z);
+
+            if (subScreen != null)
+            {
+                subScreen.transform.position = new Vector3(
+                    x * 0.5f, 
+                    subScreen.transform.position.y,
+                    subScreen.transform.position.z
+                    );
+            }
         }
     }
 }
